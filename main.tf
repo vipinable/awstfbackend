@@ -35,7 +35,8 @@ resource "aws_iam_role" "iamahywheres3role" {
       Statement = [
         {
           Action = [
-            "s3:*"
+            "s3:*",
+            "SNS:Publish"
           ]
           Effect   = "Allow"
           Resource = "*"
