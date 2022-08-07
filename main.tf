@@ -30,10 +30,7 @@ resource "aws_iam_role" "iamahywheres3role" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action = [
-            s3:GetObject,
-            s3:ListBuckets
-          ]
+          Action = [s3:GetObject,s3:ListBuckets]
           Effect   = "Allow"
           Resource = "*"
         },
