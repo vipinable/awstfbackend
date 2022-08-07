@@ -38,3 +38,8 @@ resource "aws_iam_role" "iamahywheres3role" {
     })
   }
 }
+
+resource "aws_rolesanywhere_profile" "iamahywheres3profile" {
+  name      = "iamahywheres3profile"
+  role_arns = [aws_iam_role.iamahywheres3role.arn]
+}
