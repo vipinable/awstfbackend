@@ -35,8 +35,7 @@ resource "aws_iam_role" "iamahywheres3role" {
       Statement = [
         {
           Action = [
-            "s3:GetObject",
-            "s3:ListBuckets"
+            "s3:*"
           ]
           Effect   = "Allow"
           Resource = "*"
